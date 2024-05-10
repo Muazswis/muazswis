@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>İletişim sayfası </title>
+    <link rel="stylesheet" href="./Css/bootstrap.min.css">
+    <link rel="stylesheet" href="./Css/Navbar.css">
+    <link rel="stylesheet" href="./Css/iletisim.css">
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark text-white fixed-top">
+        <a class="navbar-brand center" href="index.html"> Kişisel Web Sayfam</a>
+        <div class=container-fluid>
+
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item px-2">
+                        <a class="nav-link text-white  " href="index.html" target="_self">Hakkımda</a>
+                    </li>
+                    <li class="nav-item px-2">
+                        <a class="nav-link text-white" href="ozgecmis.html" target="_self">Özgeçmiş</a>
+                    </li>
+                    <li class="nav-item px-2">
+                        <a class="nav-link text-white" href="sehrim.html " target="_self">Şehrim</a>
+                    </li>
+                    <li class="nav-item px-2">
+                        <a class="nav-link text-white" href=" mirasimiz.html" target="_self">mirasimiz</a>
+                    </li>
+                    <li class="nav-item px-2">
+                        <a class="nav-link text-white" href="ilgialanlarim.html" target="_self">İlgi Alanlarım</a>
+                    </li>
+
+                    <li class="nav-item px-2">
+                        <a class="nav-link text-active" href="iletisim.html" target="_self">İletişim</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="site-section bg-light">
+        <div class="container mb-5">
+            <div class="row">
+                <div class="col-md-12 mb-5">
+                    <div class="section-heading text-center">
+                        <h1 class="text-muted mt-3">
+                            <center>İLETİŞİM</center>
+                        </h1>
+                        <form action="iletiЯim.php" method="POST" id="form" novalidate="" name="form">
+                            <div class="form-group">
+                                <div class="row mt-4">
+                                    <div class="col-md-3"></div>
+                                    <div class="col-md-5">
+                                        <input id="ad" class="form-control" type="text" placeholder="Adınız..." name="ad">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="row mt-3">
+                                    <div class="col-md-3"></div>
+                                    <div class="col-md-5">
+                                        <input id="soyad" class="form-control" placeholder="Soyadınız..." type="text" name="soyad">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="row mt-4">
+                                    <div class="col-md-3"></div>
+                                    <div class="col-md-5">
+                                        <input class="form-control" type="text" placeholder="Doğum Tarihiniz..." name="doğum" id="doğum">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="row">
+                                    <div class="col-md-3"></div>
+                                    <div class="col-md-5">
+                                        <select class="form-control" name="eğitim" id="eğitim">          
+                          <option>İlkokul</option>
+                          <option>Ortaokul</option>
+                          <option>Lise</option>
+                          <option>Üniversite</option>
+                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="row mt-4">
+                                    <div class="col-md-3"></div>
+                                    <div class="col-md-5 mx-1">
+                                        <input id="email" class="form-control" placeholder="Email Adresiniz..." type="text" name="email">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="row mt-4">
+                                    <div class="col-md-3"></div>
+                                    <div class="col-md-5">
+                                        <textarea id="mesaj" rows="5" name="mesaj" placeholder="Mesajınız.."></textarea>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group  ">
+                                <div class="row mt-4">
+                                    <div class="col-md-3"></div>
+                                    <div class="col-md-5 mx-2 gender">
+                                        <input class="mx-1" id="cns" type="radio" name="cns" checked value="Erkek"><strong>Erkek</strong>
+                                        <input class="mx-1" id="cns" type="radio" name="cns" value="Kadın"><strong>Kadın </strong>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="form-group   mt-4 buttons ">
+                                <div class="col-md-3"></div>
+
+                                <button class="btn btn-danger  " type="reset">Temizle</button>
+                                <div class="mx-2"></div>
+
+                                <button class="btn btn-success sendBtn" onclick="kontrol()" type="button">Gönder</button>
+                            </div>
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <script>
+        /* https://stackoverflow.com/questions/46155/whats-the-best-way-to-validate-an-email-address-in-javascript burdan alındı kod  */
+        const validateEmail = function(email) {
+            return String(email)
+                .toLowerCase()
+                .match(
+                    /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+                );
+        };
+
+        function kontrol() {
+            var sendBtn = document.querySelector(".sendBtn")
+            console.log(sendBtn)
+            var isim = document.getElementById("ad").value;
+            var soyad = document.getElementById("soyad").value;
+            var doğum = document.getElementById("doğum").value;
+            var eğitim = document.getElementById("eğitim").value;
+            var email = document.getElementById("email").value;
+            var mesaj = document.getElementById("mesaj").value;
+
+            if (isim == null || isim == "" || soyad == null || soyad == "" || doğum == null || doğum == "" || eğitim == null || eğitim == "" || mesaj == null || mesaj == "" || email == "") {
+                alert("Bütün Alanları Doldurmak Zorunludur.!");
+            }
+            if (!validateEmail(email)) {
+                alert("Email formatında degıl !");
+
+            } else {
+                sendBtn.setAttribute('type', 'submit');
+            }
+        }
+    </script>
+</body>
+
+</html>

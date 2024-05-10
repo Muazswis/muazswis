@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Righteous&family=Sawarabi+Mincho&display=swap');
+body {
+    padding-top: 100px;
+    position: relative;
+    padding-bottom: 120px;
+    min-height: 100vh;
+}
+
+nav.navbar {
+    background-color: #013220 !important;
+    height: 85px !important;
+}
+
+.text-active {
+    color: rgb(207, 42, 42) !important;
+}
+
+footer {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #013220;
+    color: #d5d5d5;
+    padding: 20px;
+}
+
+.content {
+    font-family: 'Sawarabi Mincho', serif;
+    font-size: 15px;
+    color: rgb(116, 116, 116);
+    line-height: 25px;
+}
+
+.title {
+    color: #013220;
+    font-family: 'Righteous', cursive;
+}
+
+.center {
+    width: auto;
+}
+
+@media only screen and (max-width: 800px) {
+    .center {
+        width: 100%;
+        text-align: center;
+    }
+}
