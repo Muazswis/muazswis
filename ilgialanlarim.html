@@ -15,6 +15,9 @@
 
     <nav class="navbar navbar-expand-md navbar-dark bg-dark text-white fixed-top">
         <a class="navbar-brand center" href="index.html"> Kişisel Web Sayfam</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
+            <span class="navbar-toggler-icon"></span> <!-- Hamburger menü simgesi -->
+        </button>
         <div class=container-fluid>
 
             <div class="collapse navbar-collapse" id="navbarResponsive">
@@ -32,7 +35,7 @@
                         <a class="nav-link text-white" href="sehrim.html " target="_self">Şehrim</a>
                     </li>
                     <li class="nav-item px-2">
-                        <a class="nav-link text-white" href=" mirasimiz.html" target="_self">mirasimiz</a>
+                        <a class="nav-link text-white" href=" mirasimiz.html" target="_self">Mirasımız</a>
                     </li>
                     <li class="nav-item px-2">
                         <a class="nav-link text-active" href="ilgialanlarim.html" target="_self">İlgi Alanlarım</a>
@@ -52,9 +55,20 @@
 
     </div>
 
+    <footer>
+        <div class="container-fluid padding">
+            <div class="row text-center">
+                <div class="col-md-12">
+                    MUAZ SWIS
+                </div>
+            </div>
+        </div>
+    </footer>
 
 
 </body>
+
+</script> 
 <script>
     const list = document.querySelector(".BbList")
     const api = "https://api.themoviedb.org/3/movie/popular?api_key=afca2656cc551632bb3c538c9d52ccc3&language=en-US";
@@ -80,6 +94,13 @@
             })
 
         }).catch(err => console.log(err));
+</script>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        document.querySelector(".navbar-toggler").addEventListener("click", function () {
+            document.querySelector(".navbar-collapse").classList.toggle("show");
+        });
+    });
 </script>
 
 </html>

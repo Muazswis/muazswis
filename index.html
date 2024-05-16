@@ -13,7 +13,7 @@
 <body>
     <!-- Navigation Bar -->
     <nav class="navbar navbar-expand-md navbar-dark bg-dark text-white fixed-top">
-        <a class="navbar-brand" href="index.html">Kişisel Web Sayfam</a> <!-- 'center' sınıfı kaldırıldı -->
+        <a class="navbar-brand center" href="index.html">Kişisel Web Sayfam</a>
         <div class="container-fluid">
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span> <!-- Mobil cihazlar için buton ekledim -->
@@ -48,15 +48,20 @@
     </nav>
 
     <!-- Hakkımda Sayfası -->
-    <section class="p-5 text-center hakkimda"> <!-- 'p5' yerine 'p-5' düzeltilmiş -->
+    <section class="p-5 text-center hakkimda"> 
         <div class="container">
             <h2 class="mb-auto font-weight-bold title">Hakkımda</h2>
             <hr>
             <br>
             <p class="content">
-                Suriye'den Türkiye'ye savaş nedeniyle geldim. Türkiye'de ortaokul ve liseyi tamamladım. Daha sonra yazılım mühendisliği bölümüne kabul edildim. Ancak babamın vefatı nedeniyle okulu bırakmak zorunda kaldım ve Trabzon'da turizm sektöründe çalışmaya başladım. Bir süre sonra Karadeniz Teknik Üniversitesi'nde bilgisayar mühendisliğine kabul edildim ve 1 yıl boyunca İngilizce eğitim aldım. Ancak annem ve kardeşimi yalnız bırakmamak için Sakarya'ya taşındım ve okulumu oraya transfer ettim. Eğitimime devam edebilmek ve aileme destek olabilmek için elimden geleni yaptım.
-            </p>
+                Sayfama Hoş Geldiniz, ben Muaz Swıs. 2002 yılında Suriye'de doğdum. 2015'e kadar yaşadığımız zorluklarla başa çıkmaya çalıştık. Babam, Fransızca öğretmeniydi ve aynı zamanda lisenin müdürüydü. Ancak savaş nedeniyle Türkiye'ye göç etme kararı aldık, okulumuz için. Türkiye'ye geldikten sonra ortaokul ve lise eğitimimi tamamladım.
 
+                Yazılım mühendisliği bölümüne kabul edildim, ancak babamın vefatı nedeniyle okulu bırakmak zorunda kaldım. Trabzon'da turizm sektöründe çalışmaya başladım. Bir süre sonra Karadeniz Teknik Üniversitesi'nde bilgisayar mühendisliğine kabul edildim ve 1 yıl boyunca İngilizce eğitimi aldım.
+                
+                Ancak annem ve kardeşimi yalnız bırakmamak için Sakarya'ya taşındım ve okulumu oraya transfer ettim. Eğitimime devam edebilmek ve aileme destek olabilmek için elimden geleni yaptım.
+                
+                Bu süreçte yaşadığım deneyimlerle büyüdüm ve hayatımın her aşamasında kendimi geliştirmeye çalıştım. Ailem için her zaman bir destek olmayı ve hayallerimi gerçekleştirmek için çaba harcamayı amaçlıyorum. Şimdi, geleceğe umutla bakıyor ve yeni fırsatlar için hazırım.
+              </p>
             <div class="text-center">
                 <div class="grid-container">
                     <div style="float: left; width: 50%;">
@@ -120,6 +125,12 @@
     </footer>
 
     
-    <script src="./bootstrap.js"></script> <!-- Script ekledim -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            document.querySelector(".navbar-toggler").addEventListener("click", function () {
+                document.querySelector(".navbar-collapse").classList.toggle("show");
+            });
+        });
+    </script>
 </body>
 </html>

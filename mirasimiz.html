@@ -13,7 +13,10 @@
 
 <body>
     <nav class="navbar navbar-expand-md navbar-dark bg-dark text-white fixed-top">
-        <a class="navbar-brand" href="index.html"> Kişisel Web Sayfam</a>
+        <a class="navbar-brand center" href="index.html">Kişisel Web Sayfam</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
+            <span class="navbar-toggler-icon"></span> <!-- Hamburger menü simgesi -->
+        </button>
         <div class=container-fluid>
 
             <div class="collapse navbar-collapse" id="navbarResponsive">
@@ -31,7 +34,7 @@
                         <a class="nav-link text-white" href="sehrim.html " target="_self">Şehrim</a>
                     </li>
                     <li class="nav-item px-2">
-                        <a class="nav-link text-active" href="mirasimiz.html" target="_self"> mirasimiz</a>
+                        <a class="nav-link text-active" href="mirasimiz.html" target="_self"> Mirasımız </a>
                     </li>
                     <li class="nav-item px-2">
                         <a class="nav-link text-white" href="ilgialanlarim.html" target="_self">İlgi Alanlarım</a>
@@ -52,7 +55,7 @@
             <hr>
             <br>
             <p class="content">
-                <table class="table  col-sm-7 col-12">
+                
 Homs (Arapça: حمص), Suriye'nin batısında yer alan bir şehirdir ve Homs ilinin başkentidir. Asi Nehri üzerinde yer alan Homs, Suriye'nin en büyük üçüncü şehri olarak bilinir. Homs, tarihi boyunca birçok farklı medeniyete ev sahipliği yapmış olup, önemli bir endüstri merkezi ve ulaşım noktasıdır. 2010 yılı itibarıyla Homs'un nüfusu yaklaşık 1.267.000 kişi olarak tahmin edilmektedir. Şehir, modern sanayi tesisleri, ticaret ve tarım ile ünlüdür. Ayrıca tarihsel olarak önemli yapıları ve kültürel mirası ile tanınır.
                 <br>
                 Homs, Suriye'nin batısında, tarih öncesi kökenleri olan eski bir şehirdir. İslam öncesi dönemde Roma İmparatorluğu'na bağlı olan şehir, İslamiyet'in yayılmasıyla 7. yüzyılda Müslüman Araplar tarafından fethedildi. Osmanlı İmparatorluğu'nun bir parçası olan Homs, I. Dünya Savaşı'ndan sonra Fransız Mandası'na geçti ve 1946'da bağımsız Suriye'nin bir parçası oldu.
@@ -70,7 +73,7 @@ Homs (Arapça: حمص), Suriye'nin batısında yer alan bir şehirdir ve Homs il
 
                 
                 <br>
-               </table>
+              
             <div  class="img-wrapper">
                 <img src="Images/liv4.jpg" alt="liverpool">
                 <img src="./Images/liv1.jpg" alt="liverpool">
@@ -85,12 +88,19 @@ Homs (Arapça: حمص), Suriye'nin batısında yer alan bir şehirdir ve Homs il
         <div class="container-fluid padding">
             <div class="row text-center">
                 <div class="col-md-12">
-                    MUAZ SWİS
+                    MUAZ SWIS
                 </div>
             </div>
         </div>
     </footer>
 
 </body>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        document.querySelector(".navbar-toggler").addEventListener("click", function () {
+            document.querySelector(".navbar-collapse").classList.toggle("show");
+        });
+    });
+</script>
 
 </html>

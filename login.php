@@ -6,8 +6,8 @@ $sifre="b231210577";
 if($kullanici_adi==$_POST['id'] && $sifre==$_POST['sifre'])
 {
     echo "Hoşgeldiniz b231210577 <br/>";
-    echo " 7 saniye içinde hakkimda sayfasına yönelendirileceksiniz";
-    header("Refresh: 7; url=index.html");
+    echo " 2 saniye içinde hakkimda sayfasına yönelendirileceksiniz";
+    header("Refresh: 2; url=index.html");
 
 }
 else{
