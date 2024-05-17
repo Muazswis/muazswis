@@ -159,3 +159,16 @@ img {
         font-size: 11px
     }
 }
+@media (max-width: 768px) {
+    .nav-link:nth-child(odd) {
+        background-color: #28a745;
+        color: #fff !important;
+        border-bottom: 1px solid #000;
+    }
+
+    .nav-link:nth-child(even) {
+        background-color: #ffc107;
+        color: #000 !important;
+        border-bottom: 1px solid #000;
+    }
+}

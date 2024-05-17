@@ -51,8 +51,24 @@ table tr td div span {
     flex-direction: column;
     margin-top: 2rem;
 }
+@media only screen and (max-width: 300px) {
+    .prev,
+    .next,
+    .text {
+        font-size: 11px
+    }
+}
 
-.profıle img {
-    width: 45%;
-    height: 250px;
+@media (max-width: 768px) {
+    .nav-link:nth-child(odd) {
+        background-color: #28a745;
+        color: #fff !important;
+        border-bottom: 1px solid #000;
+    }
+
+    .nav-link:nth-child(even) {
+        background-color: #ffc107;
+        color: #000 !important;
+        border-bottom: 1px solid #000;
+    }
 }
