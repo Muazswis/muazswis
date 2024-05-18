@@ -1,23 +1,20 @@
-
 <?php
- // Form verilerini işlemek için gerekli kontrolleri yapın
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Formun daha önce gönderilip gönderilmediğini kontrol edin
-    if (!isset($_POST['submitted'])) {
-        // Formun ilk kez gönderildiğini belirtmek için submitted adında bir gizli alan ekleyin
-        echo "<input type='hidden' name='submitted' value='true'>";
+// Formdan gelen verileri alır
+$ad = $_POST['ad'];
+$soyad = $_POST['soyad'];
+$dogum = $_POST['dogum'];
+$egitim = $_POST['egitim'];
+$email = $_POST['email'];
+$mesaj = $_POST['mesaj'];
+$cinsiyet = $_POST['cinsiyet'];
 
-        // Form verilerini ekrana yazdırın
-        echo "Adı:" . $_POST['ad'];
-        echo "<br>Soyadı:" . $_POST['soyad'];
-        echo "<br>Doğum Tarihi:" . $_POST['doğum'];
-        echo "<br>Eğitim Düzeyi:" . $_POST['eğitim'];
-        echo "<br>Email:" . $_POST['email'];
-        echo "<br>Cinsiyet:" . $_POST['cns'];
-        echo "<br>Kullanıcı Mesajı:" . $_POST['mesaj'];
-    } else {
-        // Formun zaten gönderildiğini belirtir
-        echo "Form zaten gönderildi!";
-    }
-}
+// Form verilerini ekrana yazdır
+echo "Ad: " . $ad . "<br>";
+echo "Soyad: " . $soyad . "<br>";
+echo "Doğum Tarihi: " . $dogum . "<br>";
+echo "Eğitim Seviyesi: " . $egitim . "<br>";
+echo "Email: " . $email . "<br>";
+echo "Cinsiyet: " . $cinsiyet . "<br>";
+echo "Mesaj: " . $mesaj . "<br>";
+
 ?>
